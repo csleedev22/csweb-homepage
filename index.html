@@ -195,13 +195,18 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <span class="hero-badge">제조/유통 중소기업 최적화</span>
-                    <h1 class="display-4 fw-bold mb-4 lh-base">
+                    <span class="hero-badge">중소기업 최적화 CSWEB ERP</span>
+                    <!-- <h1 class="display-4 fw-bold mb-4 lh-base">
                         복잡한 경영 관리,<br>
                         <span class="text-primary">CSWEB ERP</span>로 심플하게.
+                    </h1> -->
+                    <h1 class="display-4 fw-bold mb-4 lh-base">
+                        유통부터 제조까지,<br>
+                        성장에 맞춰 쓰는<span class="text-primary"> ERP</span>
                     </h1>
                     <p class="lead mb-5 text-muted">
-                        수주부터 회계까지, 기업 운영에 꼭 필요한 기능만 담았습니다.<br>
+                        세무·급여 기능은 포함되어 있지 않습니다.<br>
+                        대신 재고·구매·판매·생산 흐름에 집중했습니다.<br>
                         SaaS 기반으로 언제 어디서나 끊김 없는 업무 환경을 경험하세요.
                     </p>
                     <div class="d-flex gap-3">
@@ -387,7 +392,7 @@
                         <div class="pricing-header py-4">
                             <h5 class="text-primary fw-bold mb-3">CSWEB ERP 통합형</h5>
                             <div class="d-flex justify-content-center align-items-baseline">
-                                <span id="display-price" class="display-4 fw-extrabold text-dark" style="font-size: 3rem;">55,000</span>
+                                <span id="display-price" class="display-4 fw-extrabold text-dark" style="font-size: 3rem;">44,000</span>
                                 <span id="display-period" class="ms-1 text-muted fw-normal" style="font-size: 1.1rem;">원 / 월</span>
                             </div>
                             <p class="text-muted small mt-2" style="font-size: 0.85rem;">(부가가치세 포함)</p>
@@ -578,14 +583,14 @@
             const btnYearly = document.getElementById('btn-yearly');
 
             if (plan === 'yearly') {
-                priceEl.innerText = '550,000';
+                priceEl.innerText = '440,000';
                 periodEl.innerText = '원 / 연';
                 btnYearly.classList.add('active-toggle');
                 btnYearly.classList.remove('text-muted');
                 btnMonthly.classList.remove('active-toggle');
                 btnMonthly.classList.add('text-muted');
             } else {
-                priceEl.innerText = '55,000';
+                priceEl.innerText = '44,000';
                 periodEl.innerText = '원 / 월';
                 btnMonthly.classList.add('active-toggle');
                 btnMonthly.classList.remove('text-muted');
