@@ -183,7 +183,7 @@
                         <li class="nav-item"><a class="nav-link" href="#pricing">요금안내</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item ms-2">
-                            <a href="https://erp.csweb.co.kr/demo/demo_request" class="btn btn-primary btn-sm px-4" target="_blank" rel="noopener">무료체험 시작</a>
+                            <a href="https://erp.csweb.co.kr/demo/request?utm_content=header_cta" class="btn btn-primary btn-sm px-4 js-demo-link" target="_blank" rel="noopener">무료체험 시작</a>
                         </li>
                     </ul>
                 </div>
@@ -204,7 +204,7 @@
                         SaaS 기반으로 언제 어디서나 끊김 없는 업무 환경을 경험하세요.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="https://erp.csweb.co.kr/demo/demo_request" class="btn btn-primary btn-lg px-4 shadow" target="_blank" rel="noopener">무료체험 신청</a>
+                        <a href="https://erp.csweb.co.kr/demo/request?utm_content=hero_cta" class="btn btn-primary btn-lg px-4 shadow js-demo-link" target="_blank" rel="noopener">무료체험 신청</a>
                         <a href="#services" class="btn btn-outline-secondary btn-lg bg-white px-4">기능 둘러보기</a>
                     </div>
                 </div>
@@ -410,7 +410,7 @@
                         </div>
 
                         <div class="text-center pt-2">
-                            <a href="https://erp.csweb.co.kr/demo/demo_request" class="btn btn-primary btn-lg w-100 py-3 fw-bold shadow-sm" style="font-size: 1rem;" target="_blank" rel="noopener">
+                            <a href="https://erp.csweb.co.kr/demo/request?utm_content=pricing_cta" class="btn btn-primary btn-lg w-100 py-3 fw-bold shadow-sm js-demo-link" style="font-size: 1rem;" target="_blank" rel="noopener">
                                 무료체험 신청하기
                             </a>
                         </div>
@@ -602,6 +602,33 @@
                 btnYearly.classList.add('text-muted');
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentParams = new URLSearchParams(window.location.search);
+
+            const utmKeys = [
+                "utm_source",
+                "utm_medium",
+                "utm_campaign",
+                "utm_keyword",
+                "utm_term",
+                "utm_content"
+            ];
+
+            document.querySelectorAll(".js-demo-link").forEach(function (link) {
+                const targetUrl = new URL(link.href);
+
+                utmKeys.forEach(function (key) {
+                    const value = currentParams.get(key);
+
+                    if (value) {
+                        targetUrl.searchParams.set(key, value);
+                    }
+                });
+
+                link.href = targetUrl.toString();
+            });
+        });
     </script>
 </body>
 </html>
