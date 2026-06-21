@@ -1,0 +1,194 @@
+/* 커스텀 스타일 정의 */
+:root {
+    --primary-color: #2563eb;       /* 신뢰감을 주는 블루 */
+    --primary-dark: #1e40af;
+    --accent-color: #f8f9fa;
+    --text-main: #111827;
+    --text-sub: #6b7280;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* 네비게이션 */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.nav-link {
+    font-weight: 500;
+    color: var(--text-main) !important;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* 히어로 섹션 */
+.hero-section {
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    padding: 160px 0 100px;
+    position: relative;
+}
+/* 히어로 영역 보조 버튼 hover 보정 */
+.hero-section .btn-outline-secondary.bg-white:hover,
+.hero-section .btn-outline-secondary.bg-white:focus,
+.hero-section .btn-outline-secondary.bg-white:active {
+    background-color: #f8fafc !important;
+    color: var(--text-main) !important;
+    border-color: #94a3b8 !important;
+}
+
+.hero-section .btn-outline-primary.bg-white:hover,
+.hero-section .btn-outline-primary.bg-white:focus,
+.hero-section .btn-outline-primary.bg-white:active {
+    background-color: #eff6ff !important;
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.hero-badge {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* 공통 섹션 스타일 */
+.section-header {
+    margin-bottom: 4rem;
+}
+.section-title {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+.section-subtitle {
+    color: var(--text-sub);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* 카드 스타일 (서비스 & 장점) */
+.feature-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary-color);
+}
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 가격 섹션 */
+.pricing-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    transition: all 0.3s;
+    position: relative;
+}
+.pricing-card.popular {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+}
+.pricing-header {
+    background-color: #f8fafc;
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+.pricing-body {
+    padding: 2rem;
+}
+.price-tag {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.period {
+    font-size: 1rem;
+    color: var(--text-sub);
+    font-weight: 400;
+}
+
+/* 버튼 */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* 반응형 이미지 */
+.hero-img {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* 토글 활성화 스타일 */
+.active-toggle {
+    background-color: white !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    color: #2563eb !important;
+}
+
+.fw-extrabold { font-weight: 800; }
+
+.pricing-card {
+    border-radius: 20px;
+    border: 1px solid #eef2f7;
+    transition: all 0.3s ease;
+}/* 홈페이지-블로그 연계 보완 */
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 14px;
+}
+.footer-links a:hover {
+    color: #ffffff;
+}
+.blog-preview-card {
+    transition: all 0.25s ease;
+}
+.blog-preview-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+@media (max-width: 575.98px) {
+    .footer-links a {
+        margin-left: 0;
+        margin-right: 12px;
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+}

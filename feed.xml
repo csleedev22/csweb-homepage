@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+<channel>
+  <title>CSWEB ERP 블로그</title>
+  <link>https://www.csweb.co.kr/blog/</link>
+  <description>중소기업 ERP 도입과 업무관리 정보</description>
+  <language>ko</language>
+  <lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0900</lastBuildDate>
+
+  <item>
+    <title>재고관리 프로그램이 필요한 회사의 특징</title>
+    <link>https://www.csweb.co.kr/blog/posts/inventory-management-program-needed.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/inventory-management-program-needed.html</guid>
+    <pubDate>Sun, 21 Jun 2026 00:00:00 +0900</pubDate>
+    <description>관리할 품목이 늘어나고 재고 확인이 어려워지며, 회계결산 시 재고평가가 필요하다면 재고관리 프로그램 도입을 검토해야 합니다.</description>
+  </item>
+
+  <item>
+    <title>세무는 세무사에게 맡겼지만 자체기장을 하고 싶을 때</title>
+    <link>https://www.csweb.co.kr/blog/posts/self-bookkeeping-with-tax-accountant.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/self-bookkeeping-with-tax-accountant.html</guid>
+    <pubDate>Sun, 21 Jun 2026 00:00:00 +0900</pubDate>
+    <description>세무사는 유지하면서 회사 내부 재무 흐름을 직접 관리하고 싶은 경우를 정리했습니다.</description>
+  </item>
+
+  <item>
+    <title>생산관리에서 BOM이 중요한 이유</title>
+    <link>https://www.csweb.co.kr/blog/posts/why-bom-matters-in-production.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/why-bom-matters-in-production.html</guid>
+    <pubDate>Thu, 18 Jun 2026 00:00:00 +0900</pubDate>
+    <description>제조업 ERP에서 BOM이 왜 중요한지, 생산·재고·원가 관리 관점에서 정리했습니다.</description>
+  </item>
+
+  <item>
+    <title>수주·매출·재고를 따로 관리하면 생기는 문제</title>
+    <link>https://www.csweb.co.kr/blog/posts/order-sales-inventory-flow.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/order-sales-inventory-flow.html</guid>
+    <pubDate>Thu, 18 Jun 2026 00:00:00 +0900</pubDate>
+    <description>수주, 매출, 재고를 각각 따로 관리할 때 생기는 실무 문제와 통합 관리가 필요한 이유를 설명합니다.</description>
+  </item>
+
+  <item>
+    <title>클라우드 ERP와 설치형 ERP 차이</title>
+    <link>https://www.csweb.co.kr/blog/posts/cloud-erp-vs-installed-erp.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/cloud-erp-vs-installed-erp.html</guid>
+    <pubDate>Mon, 15 Jun 2026 00:00:00 +0900</pubDate>
+    <description>클라우드 ERP와 설치형 ERP의 운영 방식, 비용 구조, 중소기업 선택 기준을 비교합니다.</description>
+  </item>
+
+  <item>
+    <title>엑셀 관리에서 ERP로 바꿔야 하는 시점</title>
+    <link>https://www.csweb.co.kr/blog/posts/excel-to-erp-timing.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/excel-to-erp-timing.html</guid>
+    <pubDate>Mon, 15 Jun 2026 00:00:00 +0900</pubDate>
+    <description>엑셀로 업무를 관리하다가 ERP 전환을 검토해야 하는 대표적인 상황을 정리했습니다.</description>
+  </item>
+
+  <item>
+    <title>CSWEB ERP 무료체험 안내</title>
+    <link>https://www.csweb.co.kr/blog/posts/csweb-erp-free-trial.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/csweb-erp-free-trial.html</guid>
+    <pubDate>Thu, 11 Jun 2026 00:00:00 +0900</pubDate>
+    <description>CSWEB ERP 무료체험 신청 전 확인할 수 있는 서비스 범위와 이용 흐름을 안내합니다.</description>
+  </item>
+
+  <item>
+    <title>중소기업 ERP 도입 전 확인할 5가지</title>
+    <link>https://www.csweb.co.kr/blog/posts/small-business-erp-checklist.html</link>
+    <guid>https://www.csweb.co.kr/blog/posts/small-business-erp-checklist.html</guid>
+    <pubDate>Thu, 11 Jun 2026 00:00:00 +0900</pubDate>
+    <description>ERP 도입 전에 확인해야 할 업무 범위, 데이터, 사용자 권한, 비용, 무료체험 기준을 간단히 정리했습니다.</description>
+  </item>
+
+</channel>
+</rss>

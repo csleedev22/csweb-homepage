@@ -4,167 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CSWEB ERP - 중소기업 스마트 경영의 표준</title>
+    <meta name="description" content="CSWEB ERP는 중소기업의 수주, 판매, 구매, 생산, 재고, 회계 업무를 하나로 연결하는 웹 기반 ERP 서비스입니다." />
+    <link rel="canonical" href="https://www.csweb.co.kr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CSWEB ERP - 중소기업 스마트 경영의 표준" />
+    <meta property="og:description" content="중소기업을 위한 웹 기반 ERP. 수주·판매·구매·생산·재고·회계 업무를 하나로 관리하세요." />
+    <meta property="og:url" content="https://www.csweb.co.kr/" />
+    <meta property="og:image" content="https://www.csweb.co.kr/assets/img/csweb-erp-og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     
-    <style>
-        /* 커스텀 스타일 정의 */
-        :root {
-            --primary-color: #2563eb;       /* 신뢰감을 주는 블루 */
-            --primary-dark: #1e40af;
-            --accent-color: #f8f9fa;
-            --text-main: #111827;
-            --text-sub: #6b7280;
-        }
-
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-
-        /* 네비게이션 */
-        .navbar {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.95);
-        }
-        .nav-link {
-            font-weight: 500;
-            color: var(--text-main) !important;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: var(--primary-color) !important;
-        }
-
-        /* 히어로 섹션 */
-        .hero-section {
-            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-            padding: 160px 0 100px;
-            position: relative;
-        }
-        .hero-badge {
-            background-color: #dbeafe;
-            color: #1e40af;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        /* 공통 섹션 스타일 */
-        .section-header {
-            margin-bottom: 4rem;
-        }
-        .section-title {
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-        .section-subtitle {
-            color: var(--text-sub);
-            font-size: 1.1rem;
-            margin-top: 1rem;
-        }
-
-        /* 카드 스타일 (서비스 & 장점) */
-        .feature-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: var(--primary-color);
-        }
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* 가격 섹션 */
-        .pricing-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            overflow: hidden;
-            background: white;
-            transition: all 0.3s;
-            position: relative;
-        }
-        .pricing-card.popular {
-            border: 2px solid var(--primary-color);
-            transform: scale(1.05);
-            z-index: 10;
-            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
-        }
-        .pricing-header {
-            background-color: #f8fafc;
-            padding: 2.5rem 2rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        .pricing-body {
-            padding: 2rem;
-        }
-        .price-tag {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--text-main);
-        }
-        .period {
-            font-size: 1rem;
-            color: var(--text-sub);
-            font-weight: 400;
-        }
-        
-        /* 버튼 */
-        .btn-primary {
-            background-color: var(--primary-color);
-            border: none;
-            padding: 12px 28px;
-            font-weight: 600;
-            border-radius: 8px;
-        }
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-        }
-        
-        /* 반응형 이미지 */
-        .hero-img {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-        }
-
-        /* 토글 활성화 스타일 */
-        .active-toggle {
-            background-color: white !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-            color: #2563eb !important;
-        }
-        
-        .fw-extrabold { font-weight: 800; }
-        
-        .pricing-card {
-            border-radius: 20px;
-            border: 1px solid #eef2f7;
-            transition: all 0.3s ease;
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CSWEB",
+      "url": "https://www.csweb.co.kr/",
+      "email": "contact@csweb.co.kr",
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
 
@@ -178,9 +42,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center gap-3">
                         <li class="nav-item"><a class="nav-link" href="#home">홈</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog/">블로그</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">주요기능</a></li>
                         <li class="nav-item"><a class="nav-link" href="#advantages">특장점</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pricing">요금안내</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">요금</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                         <li class="nav-item ms-2">
                             <a href="https://erp.csweb.co.kr/demo/request?utm_content=header_cta" class="btn btn-primary btn-sm px-4 js-demo-link" target="_blank" rel="noopener">무료체험 시작</a>
@@ -206,6 +71,7 @@
                     <div class="d-flex gap-3">
                         <a href="https://erp.csweb.co.kr/demo/request?utm_content=hero_cta" class="btn btn-primary btn-lg px-4 shadow js-demo-link" target="_blank" rel="noopener">무료체험 신청</a>
                         <a href="#services" class="btn btn-outline-secondary btn-lg bg-white px-4">기능 둘러보기</a>
+                        <a href="/blog/" class="btn btn-outline-primary btn-lg bg-white px-4">ERP 가이드</a>
                     </div>
                 </div>
 
@@ -289,7 +155,7 @@
                             <i class="bi bi-gear-wide-connected"></i>
                         </div>
                         <h4 class="fw-bold mb-3">생산 / 재고</h4>
-                        <p class="text-muted small mb-0">BOM 기반의 정확한 소요량 산출. Loss율을 반영한 생산 관리와 빈틈없는 재고 파악이 가능합니다.</p>
+                        <p class="text-muted small mb-0">BOM 기반의 정확한 소요량 산출. 외주 및 생산 관리와 빈틈없는 재고 파악이 가능합니다.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -336,7 +202,7 @@
                     <div class="p-4 bg-white rounded shadow-sm h-100 border-start border-4 border-info">
                         <div class="fs-2 mb-3 text-info"><i class="bi bi-people"></i></div>
                         <h5>최적화된 인원 관리</h5>
-                        <p class="text-muted small">최대 30명까지 넉넉하게. 사용자별 권한 설정(읽기/쓰기/접근제한)으로 체계적인 관리가 가능합니다.</p>
+                        <p class="text-muted small">활성 사용자 최대 30명까지 넉넉하게. 사용자별 권한 설정(읽기/쓰기/접근제한)으로 체계적인 관리가 가능합니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -350,7 +216,7 @@
                     <div class="p-4 bg-white rounded shadow-sm h-100 border-start border-4 border-danger">
                         <div class="fs-2 mb-3 text-danger"><i class="bi bi-calendar-check"></i></div>
                         <h5>안전한 데이터 마감</h5>
-                        <p class="text-muted small">연도별 마감 기능을 통해 과거 데이터를 안전하게 보존하고 이력을 관리합니다.</p>
+                        <p class="text-muted small">마감 기능을 통해 과거 데이터를 안전하게 보존하고 이력을 관리합니다.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -400,7 +266,7 @@
                                 </li>
                                 <li class="d-flex align-items-center py-1">
                                     <i class="bi bi-check2-circle text-primary me-3 fs-5"></i>
-                                    <span>사용자 최대 <strong>30명</strong></span>
+                                    <span>활성 사용자 최대 <strong>30명</strong></span>
                                 </li>
                                 <li class="d-flex align-items-center py-1">
                                     <i class="bi bi-check2-circle text-primary me-3 fs-5"></i>
@@ -415,6 +281,48 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-preview" class="py-5" style="background-color: #f8fafc;">
+        <div class="container py-5">
+            <div class="row align-items-end mb-4">
+                <div class="col-lg-7">
+                    <h2 class="section-title display-6 mb-3">ERP 도입 전 읽어볼 글</h2>
+                </div>
+                <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+                    <a href="/blog/" class="btn btn-outline-primary">블로그 전체 보기 <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="/blog/posts/small-business-erp-checklist.html" class="text-decoration-none text-dark">
+                        <div class="blog-preview-card bg-white rounded-4 border p-4 h-100">
+                            <div class="small text-primary fw-bold mb-2">ERP 도입</div>
+                            <h5 class="fw-bold mb-3">중소기업 ERP 도입 전 확인할 5가지</h5>
+                            <p class="text-muted small mb-0">업무 범위, 데이터, 권한, 비용, 무료체험 기준을 간단히 정리했습니다.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/blog/posts/excel-to-erp-timing.html" class="text-decoration-none text-dark">
+                        <div class="blog-preview-card bg-white rounded-4 border p-4 h-100">
+                            <div class="small text-primary fw-bold mb-2">업무관리</div>
+                            <h5 class="fw-bold mb-3">엑셀 관리에서 ERP로 바꿔야 하는 시점</h5>
+                            <p class="text-muted small mb-0">파일 버전, 중복 입력, 재고 확인 문제를 기준으로 전환 시점을 설명합니다.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/blog/posts/order-sales-inventory-flow.html" class="text-decoration-none text-dark">
+                        <div class="blog-preview-card bg-white rounded-4 border p-4 h-100">
+                            <div class="small text-primary fw-bold mb-2">재고관리</div>
+                            <h5 class="fw-bold mb-3">수주·매출·재고를 따로 관리하면 생기는 문제</h5>
+                            <p class="text-muted small mb-0">수주부터 매출, 재고, 생산까지 한 번에 연결해야 하는 이유를 정리했습니다.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -567,7 +475,8 @@
                             <p class="mb-1">이메일: contact@csweb.co.kr</p>
                         </div>
                         <div class="col-sm-6 text-secondary small text-sm-end">
-                            <a href="https://erp.csweb.co.kr/policies/erp/terms/" target="_blank" rel="noopener">이용약관</a>
+                            <a href="/blog/">블로그 |</a>
+                            <a href="https://erp.csweb.co.kr/policies/erp/terms/" target="_blank" rel="noopener">이용약관 |</a>
                             <a href="https://erp.csweb.co.kr/policies/common/privacy/" target="_blank" rel="noopener">개인정보처리방침</a>
                             <p class="mt-3 mb-0">© 2025 CSWEB Co.,Ltd. All rights reserved.</p>
                         </div>
@@ -578,57 +487,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/js/scripts.js"></script>
-    <script>
-        function setPricing(plan) {
-            const priceEl = document.getElementById('display-price');
-            const periodEl = document.getElementById('display-period');
-            const btnMonthly = document.getElementById('btn-monthly');
-            const btnYearly = document.getElementById('btn-yearly');
-
-            if (plan === 'yearly') {
-                priceEl.innerText = '440,000';
-                periodEl.innerText = '원 / 연';
-                btnYearly.classList.add('active-toggle');
-                btnYearly.classList.remove('text-muted');
-                btnMonthly.classList.remove('active-toggle');
-                btnMonthly.classList.add('text-muted');
-            } else {
-                priceEl.innerText = '44,000';
-                periodEl.innerText = '원 / 월';
-                btnMonthly.classList.add('active-toggle');
-                btnMonthly.classList.remove('text-muted');
-                btnYearly.classList.remove('active-toggle');
-                btnYearly.classList.add('text-muted');
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentParams = new URLSearchParams(window.location.search);
-
-            const utmKeys = [
-                "utm_source",
-                "utm_medium",
-                "utm_campaign",
-                "utm_keyword",
-                "utm_term",
-                "utm_content"
-            ];
-
-            document.querySelectorAll(".js-demo-link").forEach(function (link) {
-                const targetUrl = new URL(link.href);
-
-                utmKeys.forEach(function (key) {
-                    const value = currentParams.get(key);
-
-                    if (value) {
-                        targetUrl.searchParams.set(key, value);
-                    }
-                });
-
-                link.href = targetUrl.toString();
-            });
-        });
-    </script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
