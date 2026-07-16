@@ -38,10 +38,11 @@ function setPricing(plan) {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const currentParams = new URLSearchParams(window.location.search);
 
-    const utmKeys = [
+    const trackingKeys = [
         "utm_source",
         "utm_medium",
         "utm_campaign",
@@ -50,17 +51,42 @@ document.addEventListener("DOMContentLoaded", function () {
         "utm_content"
     ];
 
-    document.querySelectorAll(".js-demo-link").forEach(function (link) {
-        const targetUrl = new URL(link.href);
+    function passTrackingParams(selector, preserveUtmContent) {
+        document.querySelectorAll(selector).forEach(function (link) {
+            let targetUrl;
 
-        utmKeys.forEach(function (key) {
-            const value = currentParams.get(key);
-
-            if (value) {
-                targetUrl.searchParams.set(key, value);
+            try {
+                targetUrl = new URL(link.href);
+            } catch (error) {
+                return;
             }
-        });
 
-        link.href = targetUrl.toString();
-    });
+            trackingKeys.forEach(function (key) {
+                const value = currentParams.get(key);
+
+                if (!value) {
+                    return;
+                }
+
+                // 상담 링크에 페이지별 utm_content가 있으면 유지
+                if (
+                    preserveUtmContent
+                    && key === "utm_content"
+                    && targetUrl.searchParams.has("utm_content")
+                ) {
+                    return;
+                }
+
+                targetUrl.searchParams.set(key, value);
+            });
+
+            link.href = targetUrl.toString();
+        });
+    }
+
+    // 무료체험 링크
+    passTrackingParams(".js-demo-link", false);
+
+    // 도입 상담 링크
+    passTrackingParams(".js-consult-link", true);
 });
