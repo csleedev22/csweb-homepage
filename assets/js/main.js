@@ -15,30 +15,6 @@
 })();
 
 
-function setPricing(plan) {
-    const priceEl = document.getElementById('display-price');
-    const periodEl = document.getElementById('display-period');
-    const btnMonthly = document.getElementById('btn-monthly');
-    const btnYearly = document.getElementById('btn-yearly');
-
-    if (plan === 'yearly') {
-        priceEl.innerText = '440,000';
-        periodEl.innerText = '원 / 연';
-        btnYearly.classList.add('active-toggle');
-        btnYearly.classList.remove('text-muted');
-        btnMonthly.classList.remove('active-toggle');
-        btnMonthly.classList.add('text-muted');
-    } else {
-        priceEl.innerText = '44,000';
-        periodEl.innerText = '원 / 월';
-        btnMonthly.classList.add('active-toggle');
-        btnMonthly.classList.remove('text-muted');
-        btnYearly.classList.remove('active-toggle');
-        btnYearly.classList.add('text-muted');
-    }
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const currentParams = new URLSearchParams(window.location.search);
 
