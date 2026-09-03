@@ -228,3 +228,496 @@ a { color: inherit; text-decoration: none; }
         padding: 70px 0;
     }
 }
+
+/* 메인 홈페이지 리디자인 */
+/*
+ * 메인 홈페이지 디자인 정돈
+ * 콘텐츠 구조는 유지하고, 메인 페이지 안에서만 시각 규칙을 통일합니다.
+ */
+.homepage-redesign {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-soft: #eff6ff;
+    --ink: #0f172a;
+    --ink-subtle: #475569;
+    --line: #dfe6ef;
+    --surface: #f7f9fc;
+    --card-radius: 18px;
+    --section-space: 6.5rem;
+    background: #fff;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.homepage-redesign a,
+.homepage-redesign button {
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.homepage-redesign a:focus-visible,
+.homepage-redesign button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, .3);
+    outline-offset: 3px;
+}
+
+.homepage-redesign header {
+    border-bottom: 1px solid rgba(226, 232, 240, .9);
+    background: rgba(255, 255, 255, .94);
+    backdrop-filter: blur(16px);
+}
+
+.homepage-redesign .navbar {
+    min-height: 72px;
+    padding-top: .55rem;
+    padding-bottom: .55rem;
+    background: transparent;
+}
+
+.homepage-redesign .navbar-brand {
+    color: var(--ink) !important;
+    font-weight: 850 !important;
+    letter-spacing: -.035em;
+}
+
+.homepage-redesign .navbar-brand i {
+    color: var(--primary-color);
+}
+
+.homepage-redesign .nav-link {
+    padding-right: .75rem !important;
+    padding-left: .75rem !important;
+    color: #334155 !important;
+    font-size: .95rem;
+    font-weight: 650;
+}
+
+.homepage-redesign .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.homepage-redesign .btn {
+    min-height: 46px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.homepage-redesign .btn-primary {
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, .17);
+}
+
+.homepage-redesign .btn-primary:hover {
+    border-color: var(--primary-dark);
+    background: var(--primary-dark);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, .24);
+    transform: translateY(-1px);
+}
+
+.homepage-redesign .btn-outline-primary {
+    border-color: #9bb9ef;
+    color: var(--primary-dark);
+    background: rgba(255, 255, 255, .72);
+}
+
+.homepage-redesign .btn-outline-primary:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-dark);
+    background: var(--primary-soft);
+}
+
+.homepage-redesign .hero-section {
+    padding: 142px 0 86px;
+    background: linear-gradient(135deg, #f3f7fd 0%, #fbfdff 52%, #eef4fc 100%);
+}
+
+.homepage-redesign .hero-section::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    background: radial-gradient(circle at 75% 28%, rgba(37, 99, 235, .12), transparent 30%);
+}
+
+.homepage-redesign .hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.homepage-redesign .hero-badge {
+    margin-bottom: 1.35rem;
+    padding: .48rem .88rem;
+    border: 1px solid #cfe0fc;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .8);
+    color: var(--primary-dark);
+    font-size: .84rem;
+    font-weight: 750;
+}
+
+.homepage-redesign .hero-section h1 {
+    max-width: 650px;
+    margin-bottom: 1.6rem;
+    color: var(--ink);
+    font-size: clamp(2.55rem, 4.5vw, 4rem);
+    line-height: 1.13;
+    letter-spacing: -.055em;
+}
+
+.homepage-redesign .hero-section .lead {
+    max-width: 570px;
+    margin-bottom: 2.3rem !important;
+    color: var(--ink-subtle) !important;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.homepage-redesign .hero-section .d-flex.gap-3 {
+    flex-wrap: wrap;
+    gap: .7rem !important;
+}
+
+.homepage-redesign .hero-section .btn-lg {
+    padding: .78rem 1.25rem;
+    font-size: .98rem;
+}
+
+.homepage-redesign .hero-workspace-photo {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, .34);
+    border-radius: 24px;
+    background: #e9eef5;
+    box-shadow: 0 28px 64px rgba(15, 23, 42, .16);
+}
+
+.homepage-redesign .hero-workspace-photo::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35);
+}
+
+.homepage-redesign .hero-workspace-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.homepage-redesign .hero-workspace-photo figcaption {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 1;
+    max-width: calc(100% - 24px);
+    padding: .45rem .65rem;
+    border: 1px solid rgba(255, 255, 255, .64);
+    border-radius: 8px;
+    color: #334155;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: blur(8px);
+    font-size: .68rem;
+    line-height: 1.35;
+}
+
+.homepage-redesign #services,
+.homepage-redesign #advantages,
+.homepage-redesign #pricing,
+.homepage-redesign #blog-preview,
+.homepage-redesign #faq {
+    padding: var(--section-space) 0 !important;
+}
+
+.homepage-redesign #services > .container,
+.homepage-redesign #advantages > .container,
+.homepage-redesign #pricing > .container,
+.homepage-redesign #blog-preview > .container,
+.homepage-redesign #faq > .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.homepage-redesign #advantages,
+.homepage-redesign #blog-preview,
+.homepage-redesign #faq {
+    background: var(--surface) !important;
+}
+
+.homepage-redesign #blog-preview {
+    background: #fff !important;
+}
+
+.homepage-redesign .section-header {
+    margin-bottom: 3.3rem;
+}
+
+.homepage-redesign .section-title,
+.homepage-redesign #faq > .container > .row > div > .text-center h2 {
+    color: var(--ink);
+    font-size: clamp(2rem, 3.3vw, 2.7rem) !important;
+    line-height: 1.25;
+    letter-spacing: -.045em;
+    font-weight: 820;
+}
+
+.homepage-redesign .section-subtitle,
+.homepage-redesign #faq > .container > .row > div > .text-center p {
+    margin-top: .9rem;
+    color: var(--ink-subtle) !important;
+    font-size: 1rem;
+}
+
+.homepage-redesign .feature-card,
+.homepage-redesign #advantages .row.g-4 > div > div,
+.homepage-redesign .blog-preview-card {
+    border: 1px solid var(--line) !important;
+    border-radius: var(--card-radius) !important;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, .055) !important;
+}
+
+.homepage-redesign .feature-card {
+    padding: 2rem 1.65rem;
+}
+
+.homepage-redesign .feature-card:hover,
+.homepage-redesign .blog-preview-card:hover {
+    border-color: #b9cff5 !important;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, .09) !important;
+    transform: translateY(-3px);
+}
+
+.homepage-redesign .icon-box,
+.homepage-redesign #advantages .row.g-4 > div > div > .fs-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.25rem !important;
+    border-radius: 13px;
+    color: var(--primary-color) !important;
+    background: var(--primary-soft);
+    font-size: 1.35rem !important;
+}
+
+.homepage-redesign .feature-card h4,
+.homepage-redesign #advantages h5,
+.homepage-redesign .blog-preview-card h5 {
+    color: var(--ink);
+    font-size: 1.13rem;
+    line-height: 1.45;
+    font-weight: 760 !important;
+}
+
+.homepage-redesign .feature-card p,
+.homepage-redesign #advantages .text-muted,
+.homepage-redesign .blog-preview-card p {
+    color: var(--ink-subtle) !important;
+    font-size: .9rem !important;
+    line-height: 1.72;
+}
+
+.homepage-redesign #advantages .row.g-4 > div > div {
+    padding: 1.75rem !important;
+    border-left-width: 1px !important;
+}
+
+.homepage-redesign #advantages .row.align-items-center {
+    margin-bottom: 3.1rem !important;
+}
+
+.homepage-redesign #advantages .lead {
+    color: var(--ink-subtle) !important;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.homepage-redesign .pricing-card.popular {
+    overflow: hidden;
+    border: 1px solid #b7cdf4 !important;
+    border-radius: 22px;
+    box-shadow: 0 24px 55px rgba(37, 99, 235, .14) !important;
+    transform: none;
+}
+
+.homepage-redesign .pricing-header {
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #f7faff, #fff);
+}
+
+.homepage-redesign .pricing-body {
+    border-color: var(--line) !important;
+    background: #fff !important;
+}
+
+.homepage-redesign #display-price {
+    color: var(--ink) !important;
+    letter-spacing: -.04em;
+}
+
+.homepage-redesign .blog-preview-card {
+    min-height: 205px;
+    padding: 1.75rem !important;
+}
+
+.homepage-redesign .accordion {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--card-radius) !important;
+    box-shadow: 0 12px 36px rgba(15, 23, 42, .065) !important;
+}
+
+.homepage-redesign .accordion-item {
+    border-color: var(--line);
+}
+
+.homepage-redesign .accordion-button {
+    min-height: 68px;
+    padding: 1.25rem 1.5rem;
+    color: var(--ink);
+    background: #fff;
+    font-size: .98rem;
+}
+
+.homepage-redesign .accordion-button:not(.collapsed) {
+    color: var(--primary-dark);
+    background: var(--primary-soft);
+    box-shadow: none;
+}
+
+.homepage-redesign .accordion-button:focus {
+    box-shadow: inset 0 0 0 2px rgba(37, 99, 235, .22);
+}
+
+.homepage-redesign .accordion-body {
+    padding: 1.35rem 1.5rem 1.55rem;
+    color: var(--ink-subtle) !important;
+}
+
+.homepage-redesign .home-final-cta {
+    padding: 92px 0;
+    background: linear-gradient(125deg, #17367f, #2563eb 67%, #3b82f6);
+}
+
+.homepage-redesign .home-final-inner > span {
+    color: #d2e2ff;
+}
+
+.homepage-redesign footer {
+    padding: 4rem 0 !important;
+    background: #111827 !important;
+}
+
+.homepage-redesign footer .text-secondary,
+.homepage-redesign footer p {
+    color: #9ca3af !important;
+    line-height: 1.7;
+}
+
+.homepage-redesign footer a {
+    color: #cbd5e1;
+}
+
+.homepage-redesign footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .homepage-redesign .navbar-collapse {
+        padding: .8rem 0 1.1rem;
+    }
+
+    .homepage-redesign .navbar-nav {
+        align-items: stretch !important;
+        gap: 0 !important;
+    }
+
+    .homepage-redesign .navbar .nav-item.ms-2 {
+        margin: .55rem 0 0 !important;
+    }
+
+    .homepage-redesign .navbar .nav-item.ms-2 .btn {
+        width: 100%;
+    }
+
+    .homepage-redesign .hero-section {
+        padding: 122px 0 72px;
+    }
+
+    .homepage-redesign .hero-workspace-photo {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .homepage-redesign {
+        --section-space: 4.5rem;
+    }
+
+    .homepage-redesign .navbar {
+        min-height: 66px;
+    }
+
+    .homepage-redesign .hero-section {
+        padding: 108px 0 58px;
+    }
+
+    .homepage-redesign .hero-section h1 {
+        font-size: clamp(2.15rem, 10vw, 3rem);
+    }
+
+    .homepage-redesign .hero-section .d-flex.gap-3 {
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .homepage-redesign .hero-section .btn {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    .homepage-redesign .hero-workspace-photo {
+        border-radius: 18px;
+    }
+
+    .homepage-redesign .hero-workspace-photo figcaption {
+        position: static;
+        max-width: none;
+        border: 0;
+        border-top: 1px solid var(--line);
+        border-radius: 0;
+        background: #fff;
+        text-align: center;
+    }
+
+    .homepage-redesign #advantages .row.align-items-center > div,
+    .homepage-redesign #blog-preview .row.align-items-end > div {
+        text-align: left !important;
+    }
+
+    .homepage-redesign #advantages .row.align-items-center .btn,
+    .homepage-redesign #blog-preview .row.align-items-end .btn {
+        width: 100%;
+    }
+
+    .homepage-redesign .pricing-card.popular {
+        margin: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .homepage-redesign *,
+    .homepage-redesign *::before,
+    .homepage-redesign *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
